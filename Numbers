@@ -1,0 +1,40 @@
+from random import randint
+
+
+los = randint (1,50)
+odp = -1
+i = 0
+print('Zgadnij liczbę z przedziału od 1 do 50')
+
+while odp != los:
+    i += 1
+    odp = int(input('Podaj liczbę: '))
+    if odp > los:
+        print('Niestety, wylosowana liczba jest mniejsza od Twojej')
+        if los % 2 == 0:
+            if los > 25 :
+                print('Szukaj liczby większej od 25')
+            elif los < 25:
+                print('Szukaj liczby mniejszej od 25')
+            print('Podpowiedź: Liczba jest parzysta')
+        elif los % 2 == 1:
+            if los > 25 :
+                print('Szukaj liczby większej od 25')
+            elif los < 25:
+                print('Szukaj liczby mniejszej od 25')
+            print('Podpowiedź: Liczba jest nieparzysta')
+    elif odp < los:
+        print('Niestety, wylosowana liczba jest większa od Twojej')
+        if los % 2 == 0:
+            if los > 25 :
+                print('Szukaj liczby większej od 25')
+            elif los < 25:
+                print('Szukaj liczby mniejszej od 25')
+            print('Podpowiedź: Liczba jest parzysta')
+        elif los % 2 == 1:
+            if los > 25 :
+                print('Szukaj liczby większej od 25')
+            elif los < 25:
+                print('Szukaj liczby mniejszej od 25')
+            print('Podpowiedź: Liczba jest nieparzysta')
+print('Brawo! Odgadłeś za', i, 'razem')
